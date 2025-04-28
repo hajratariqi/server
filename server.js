@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
   res.send('API Running...');
 });
 
-app.listen(8000, () => {
-  console.log('Server running on port 8000');
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
